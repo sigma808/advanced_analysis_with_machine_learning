@@ -1,0 +1,20 @@
+> titanic<-read.csv("train.csv",header=TRUE)
+> dim(titanic)
+[1] 891  13
+> names(titanic)
+ [1] "PassengerId" "Survived"    "Pclass"      "Name"        "Sex"         "Age"         "SibSp"       "Parch"       "Ticket"      "Fare"        "Cabin"      
+[12] "Embarked"    "Ag_grp"     
+> attach(titanic)
+> apply(tianic,2,class)
+Error in apply(tianic, 2, class) : object 'tianic' not found
+> apply(titanic,2,class)
+PassengerId    Survived      Pclass        Name         Sex         Age       SibSp       Parch      Ticket        Fare       Cabin    Embarked      Ag_grp 
+"character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" 
+> apply(titanic,2,mode)
+PassengerId    Survived      Pclass        Name         Sex         Age       SibSp       Parch      Ticket        Fare       Cabin    Embarked      Ag_grp 
+"character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" 
+> apply(titanic,2,type)
+Error in match.fun(FUN) : object 'type' not found
+> apply(titanic,2,typeof)
+PassengerId    Survived      Pclass        Name         Sex         Age       SibSp       Parch      Ticket        Fare       Cabin    Embarked      Ag_grp 
+"character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" "character" 
