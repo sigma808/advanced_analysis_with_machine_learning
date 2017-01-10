@@ -1,0 +1,65 @@
+import pandas as pd
+titanic=pd.read_table('train.csv',sep=',')
+type(titanic)
+Out[11]: pandas.core.frame.DataFrame
+
+import numpy as np
+
+import array
+
+titanic.ndim
+Out[6]: 2
+
+titanic.shape
+Out[7]: (891, 13)
+
+titanic.columns
+Out[22]: 
+Index([u'PassengerId', u'Survived', u'Pclass', u'Name', u'Sex', u'Age',
+       u'SibSp', u'Parch', u'Ticket', u'Fare', u'Cabin', u'Embarked',
+       u'Ag_grp'],
+      dtype='object')
+
+titanic.PassengerId.dtype
+Out[24]: dtype('int64')
+
+titanic.Survived.dtype
+Out[107]: dtype('int64')
+
+titanic.Pclass.dtype
+Out[95]: dtype('int64')
+
+Pclass=titanic.Pclass.astype(np.string_)
+
+Pclass.dtype
+Out[94]: dtype('O')
+
+titanic.Name.dtype
+Out[97]: dtype('O')
+
+titanic.Sex.dtype
+Out[98]: dtype('O')
+
+titanic.Age.dtype
+Out[99]: dtype('float64')
+
+titanic.SibSp.dtype
+Out[100]: dtype('int64')
+
+titanic.Parch.dtype
+Out[101]: dtype('int64')
+
+titanic.Ticket.dtype
+Out[102]: dtype('O')
+
+titanic.Fare.dtype
+Out[103]: dtype('float64')
+
+titanic.Cabin.dtype
+Out[104]: dtype('O')
+
+titanic.Embarked.dtype
+Out[105]: dtype('O')
+
+titanic.Ag_grp.dtype
+Out[106]: dtype('O')
